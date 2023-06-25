@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" type = "text/css" href="PARTB.css">
+	<script src="PARTB.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+	<title>Western Valley Farms</title>
+
+</head>
+<body>
+
+	<img src="photos/header.jpg" alt="img5.png">
+	<!-- https://www.brandcrowd.com/maker/logo/9601e4be-54d0-4a5f-b3dd-0beadc8a7775/draft/0c3b64a4-c967-4178-8aca-7221bdc37e1b?savedDraft=True -->
+
+	<div class="main">
+		<h3>Today is: <br><span id="mydate"></span></h3>
+		<h1>Western Valley Farms</h1>
+		
+		<form>
+			<label>Current Date</label><br>
+			<input type="Date" id="n0"><br>
+
+			<label>Client Name</label><br>
+			<input  id="name" type="text" maxlength="25" required pattern="[A-Za-z -]+$" placeholder="Enter your name here"><br>
+
+			<label>Street Address</label><br>
+			<input id="address" type="text" required placeholder="enter your address"><br>
+
+			<label>Postal Code</label><br>
+			<input type="text" id="n3" placeholder="enter your postal code" pattern = "[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"><br>
+
+			<label>Phone Number</label><br>
+			<input class="opt1" type="radio" name="r1"> Business
+			<input class="opt2" type="radio" name="r1" checked> Personal<br>
+			<input type="tel"  pattern="[0-9]{3}[-][0-9]{3}[-][0-9]{4}" placeholder="e.g 123-123-1234"><br>
+
+			<label>E-mail</label><br>
+			<input type="email" id="n5" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="abc@example.com"><br>
+
+			<label>Transport Option</label><br>
+			<input class="opt1" name=specialty type="radio" value=1 > Pick up
+			<input class="opt2" name=specialty type="radio" value=2 checked> Delivery<br>
+
+			<label class="hamper">Food Hampers</label><br>
+
+			<label class="food">Vegetable Hamper (20kg: $30.00)</label><br>
+			<input id="vegHamper" type="Number" placeholder="Enter the number of Hampers"><br>
+
+			<label class="food">Fruit Hamper (10kg: $20.00)</label><br>
+			<input id="fruitHamper" type="Number" placeholder="Enter the number of Hampers"><br>
+
+			<label class="food">Fresh Chicken ($7.00 per Chicken)</label><br>
+			<input id="freshChicken" type="Number" placeholder="Enter the number of Chicken"><br>
+
+			<label class="food">Pork ($5/kg)</label><br>    
+			<input id="pork" type="Number" placeholder="Enter the weight of pork"><br>
+
+			<input type="reset" value="Reset"> <input type="submit" value="Submit" onClick="calculations(); return false;">
+
+
+			</form>
+	</div>
+
+		<h2>Your Order Details: <br><span id="result"></span></h2>
+
+	
+</body>
+</html>
